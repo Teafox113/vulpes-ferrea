@@ -1,0 +1,10 @@
+# Required: generate outlines and build OTF/TTF
+shapely==2.2.0
+fonttools==4.67.0
+
+# Optional: each one enables an extra output (skipped with a note if missing)
+ttfautohint-py==0.6.1      # TTF hinting
+brotli==1.2.1              # WOFF2
+ufoLib2==0.19.1            # UFO source export
+pillow==12.3.0             # documentation/specimen.png
+opentype-sanitizer==9.2.0  # OTS validation (the browser font sanitizer)

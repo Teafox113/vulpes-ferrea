@@ -1,0 +1,20 @@
+# Normalise line endings in text files
+* text=auto eol=lf
+
+# Font binaries and images: never touch
+*.ttf    binary
+*.otf    binary
+*.woff   binary
+*.woff2  binary
+*.png    binary
+
+# UFO sources are XML text; show real diffs
+*.glif   text diff
+*.plist  text diff
+*.fea    text
+
+# Generated files: collapse in GitHub diffs and language stats
+sources/glyphs.json          linguist-generated=true -diff
+documentation/specimen.html  linguist-generated=true
+documentation/webtest.html   linguist-generated=true
+documentation/check.md       linguist-generated=true

@@ -1,0 +1,75 @@
+FONTLOG for Vulpes Ferrea
+=========================
+
+This file provides detailed information on the Vulpes Ferrea font software.
+This information should be distributed along with the Vulpes Ferrea fonts
+and any derivative works.
+
+
+Basic Font Information
+----------------------
+
+Vulpes Ferrea ("Iron Fox", 鐵狐體) rebuilds the skeleton of Textura blackletter
+with chamfered cyberpunk geometry. There are no curves: every outline is made of
+straight segments at 0, 45 and 90 degrees (plus a registered set of diagonal
+letters), placed on a 30-unit module grid with nodes on a 15-unit half grid.
+
+Design rules:
+- Picket fence rhythm: in lowercase, stem, counter and the space between letters
+  are all 90 units, the dense vertical texture of Textura.
+- Broken strokes: every turn is a 45-degree chamfer.
+- Pen axis: large chamfers only at top-left and bottom-right, small ones at
+  top-right and bottom-left, as if every letter were cut by the same blade.
+- Fixed contrast: stems 90, bars 60, diagonals about 64.
+- Three signature marks: the "fox ear" notch on ascenders, the blade cut on free
+  stroke ends, and the diamond (period, i-dot, the centre of zero).
+
+Outlines are not drawn by hand. They are computed by scripts/build_glyphs.py
+from the specification in documentation/design/03-spec.md. No outline was
+traced, converted or copied from any existing font.
+
+Intended use: display, titles, logos, interface headings and game UI at 20 px
+and above. Not intended for long text.
+
+Character set: Basic Latin, Latin-1 Supplement and the full Windows-1252 code
+page (224 code points), plus 48 OpenType alternates.
+
+OpenType features: kern (class based), pnum/tnum (tabular figures by default),
+zero (slashed zero), case (case-sensitive punctuation), frac, numr, dnom.
+
+
+ChangeLog
+---------
+
+13 November 2026 (FOX) Vulpes Ferrea Version 0.300 (design revision r3)
+- Completed every character outside Chinese: typographic punctuation, currency,
+  superiors and fractions, and all Windows-1252 / Latin-1 letters.
+- Accented letters composed from base letters and a new set of accent parts.
+- Redesigned k, Q, &, @, ß (Textura long-s + ezh form), and the quotes:
+  straight quotes are plain bars, curly quotes are wedges.
+- Class-based kerning; OpenType features pnum, tnum, zero, case, frac, numr, dnom.
+- OTF, autohinted TTF, WOFF2 and UFO outputs; all pass OTS.
+- Released under the SIL Open Font License 1.1.
+
+12 November 2026 (FOX) Design revision r2
+- Darker colour: lowercase counters 120 -> 90 (black-to-white ratio 1:1).
+- All diagonals 90 units wide with endpoints on the grid.
+- Completed the 95 printable ASCII characters.
+
+12 November 2026 (FOX) Design revision r1
+- Project start: concept, specification and 42 control glyphs.
+
+
+Acknowledgements
+----------------
+
+If you make modifications be sure to add your name (N), email (E),
+web-address (if you have one) (W) and description (D).
+This list is in alphabetical order.
+
+N: FOX
+D: Concept, art direction and design decisions; project owner.
+
+N: Claude Opus 5.5 (Anthropic)
+D: Specification, glyph generator, engineering and documentation, produced
+   under FOX's direction (AI assistance; not a copyright author).

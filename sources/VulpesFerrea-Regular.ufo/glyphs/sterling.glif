@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="sterling" format="2">
+  <advance width="390"/>
+  <unicode hex="00A3"/>
+  <outline>
+    <contour>
+      <point x="30" y="60" type="line"/>
+      <point x="30" y="30" type="line"/>
+      <point x="60" y="0" type="line"/>
+      <point x="300" y="0" type="line"/>
+      <point x="360" y="60" type="line"/>
+      <point x="180" y="60" type="line"/>
+      <point x="180" y="300" type="line"/>
+      <point x="240" y="300" type="line"/>
+      <point x="300" y="360" type="line"/>
+      <point x="180" y="360" type="line"/>
+      <point x="180" y="660" type="line"/>
+      <point x="300" y="660" type="line"/>
+      <point x="360" y="720" type="line"/>
+      <point x="210" y="720" type="line"/>
+      <point x="90" y="600" type="line"/>
+      <point x="90" y="360" type="line"/>
+      <point x="30" y="300" type="line"/>
+      <point x="90" y="300" type="line"/>
+      <point x="90" y="60" type="line"/>
+    </contour>
+  </outline>
+</glyph>

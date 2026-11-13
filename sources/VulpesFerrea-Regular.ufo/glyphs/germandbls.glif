@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="germandbls" format="2">
+  <advance width="390"/>
+  <unicode hex="00DF"/>
+  <outline>
+    <contour>
+      <point x="255" y="0" type="line"/>
+      <point x="345" y="90" type="line"/>
+      <point x="345" y="480" type="line"/>
+      <point x="315" y="510" type="line"/>
+      <point x="225" y="510" type="line"/>
+      <point x="315" y="600" type="line"/>
+      <point x="315" y="750" type="line"/>
+      <point x="285" y="780" type="line"/>
+      <point x="135" y="780" type="line"/>
+      <point x="45" y="690" type="line"/>
+      <point x="45" y="0" type="line"/>
+      <point x="75" y="0" type="line"/>
+      <point x="135" y="60" type="line"/>
+      <point x="135" y="450" type="line"/>
+      <point x="255" y="450" type="line"/>
+      <point x="255" y="90" type="line"/>
+      <point x="195" y="30" type="line"/>
+      <point x="195" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="135" y="510" type="line"/>
+      <point x="135" y="690" type="line"/>
+      <point x="165" y="720" type="line"/>
+      <point x="225" y="720" type="line"/>
+      <point x="225" y="600" type="line"/>
+    </contour>
+  </outline>
+</glyph>

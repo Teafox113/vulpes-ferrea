@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ampersand" format="2">
+  <advance width="480"/>
+  <unicode hex="0026"/>
+  <outline>
+    <contour>
+      <point x="300" y="60" type="line"/>
+      <point x="165" y="60" type="line"/>
+      <point x="165" y="450" type="line"/>
+      <point x="255" y="450" type="line"/>
+      <point x="300" y="257.14" type="line"/>
+      <point x="300" y="240" type="line"/>
+      <point x="304" y="240" type="line"/>
+      <point x="360" y="0" type="line"/>
+      <point x="450" y="0" type="line"/>
+      <point x="393.24" y="243.24" type="line"/>
+      <point x="450" y="300" type="line"/>
+      <point x="380" y="300" type="line"/>
+      <point x="345" y="450" type="line"/>
+      <point x="345" y="690" type="line"/>
+      <point x="315" y="720" type="line"/>
+      <point x="165" y="720" type="line"/>
+      <point x="75" y="630" type="line"/>
+      <point x="75" y="510" type="line"/>
+      <point x="90" y="510" type="line"/>
+      <point x="30" y="450" type="line"/>
+      <point x="30" y="30" type="line"/>
+      <point x="60" y="0" type="line"/>
+      <point x="300" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="165" y="630" type="line"/>
+      <point x="195" y="660" type="line"/>
+      <point x="255" y="660" type="line"/>
+      <point x="255" y="510" type="line"/>
+      <point x="165" y="510" type="line"/>
+    </contour>
+  </outline>
+</glyph>

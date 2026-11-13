@@ -1,0 +1,14 @@
+# This is the list of people who have contributed to this project,
+# and includes those not listed in AUTHORS.txt because they are not
+# copyright authors.
+#
+# Names should be added to this file as:
+# Name <email address>
+
+FOX
+  Concept, art direction and every design decision; project owner.
+
+# AI assistance (listed for transparency; not a copyright author)
+Claude Opus 5.5 (Anthropic)
+  Design specification, glyph generator (scripts/), engineering and documentation,
+  produced under FOX's direction.

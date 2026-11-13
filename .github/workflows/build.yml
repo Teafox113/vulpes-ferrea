@@ -1,0 +1,54 @@
+name: Build fonts
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build fonts and run the spec check
+        # build_glyphs.py exits non-zero if any glyph breaks the spec (documentation/check.md)
+        run: python scripts/build_glyphs.py
+
+      - name: Warn if committed fonts are out of date
+        run: |
+          if ! git diff --quiet -- fonts; then
+            echo "::warning::fonts/ differs from a fresh build. Run 'make build' and commit the result."
+            git diff --stat -- fonts
+          fi
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: VulpesFerrea-${{ github.sha }}
+          path: |
+            fonts/
+            documentation/check.md
+            OFL.txt
+
+      - name: Attach fonts to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          zip -r "VulpesFerrea-${{ github.event.release.tag_name }}.zip" fonts OFL.txt FONTLOG.txt
+          gh release upload "${{ github.event.release.tag_name }}" "VulpesFerrea-${{ github.event.release.tag_name }}.zip" --clobber

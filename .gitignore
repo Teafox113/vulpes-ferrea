@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+*.egg-info/
+
+# Build leftovers
+*.hinted
+build.stamp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*~
+*.swp
+
+# Font editor autosaves
+*(Autosaved).*
+*（已自動儲存）.*
