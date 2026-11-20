@@ -41,6 +41,16 @@ zero (slashed zero), case (case-sensitive punctuation), frac, numr, dnom.
 ChangeLog
 ---------
 
+20 November 2026 (FOX) Vulpes Ferrea Version 0.310
+- Redesigned v, w, x and V, W, X with a broken-stroke skeleton (Codex
+  proposal 004, option A), tying them to the n, u, m, H, N picket rhythm:
+  - v / V: a stem reaches the baseline, a rising diagonal climbs to a short
+    stem (Textura form). w / W repeat the move with three stems.
+  - x / X: both strokes run stem, 45-degree diagonal, stem and cross in the
+    middle, so every corner ends in a bladed stem foot.
+- Kerning: V and W lose their diagonal left side; V/W + round lowercase
+  reduced from -45 to -30.
+
 13 November 2026 (FOX) Vulpes Ferrea Version 0.300 (design revision r3)
 - Completed every character outside Chinese: typographic punctuation, currency,
   superiors and fractions, and all Windows-1252 / Latin-1 letters.

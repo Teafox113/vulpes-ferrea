@@ -9,7 +9,7 @@
 | | |
 | --- | --- |
 | Style | Regular (one weight) |
-| Version | 0.300 |
+| Version | 0.310 |
 | Character set | Basic Latin, Latin-1 Supplement, Windows-1252 — 224 code points, 271 glyphs |
 | OpenType | `kern` `pnum` `tnum` `zero` `case` `frac` `numr` `dnom` |
 | Formats | OTF, TTF (autohinted), WOFF2, UFO |

@@ -1,6 +1,6 @@
-# 規範自檢與字型驗證（Version 0.300）
+# 規範自檢與字型驗證（Version 0.310）
 
-字形 271（含 .notdef、space）；有碼位字形 222；Unicode 碼位 224；替換字 48；字偶 1296 對（class 展開後）
+字形 271（含 .notdef、space）；有碼位字形 222；Unicode 碼位 224；替換字 48；字偶 1187 對（class 展開後）
 
 ## 規範違規（0）
 
@@ -9,7 +9,7 @@
 ## 字型檔
 
 - hinting：TTF 已用 ttfautohint（8–48 ppem，Windows 相容模式）
-- WOFF2：VulpesFerrea-Regular.woff2（13,816 bytes）
+- WOFF2：VulpesFerrea-Regular.woff2（13,880 bytes）
 - UFO：VulpesFerrea-Regular.ufo（271 字形，含 features.fea）
 - VulpesFerrea-Regular.ttf：271 字形、224 碼位、功能 case dnom frac kern numr pnum tnum zero
 - VulpesFerrea-Regular.otf：271 字形、224 碼位、功能 case dnom frac kern numr pnum tnum zero
@@ -21,11 +21,15 @@
 ## 已登記例外
 
 - 縮放字（7.5 格點）：eight.dnom eight.numr five.dnom five.numr four.dnom four.numr nine.dnom nine.numr one.dnom one.numr onehalf onequarter onesuperior ordfeminine ordmasculine seven.dnom seven.numr six.dnom six.numr three.dnom three.numr threequarters threesuperior two.dnom two.numr twosuperior zero.dnom zero.numr
-- 斜畫布林交點離格點（28）：
+- 斜畫布林交點離格點（32）：
   - R: 斜畫交點 (217.5,330)
   - K: 斜畫交點 (150,325)
   - K: 斜畫交點 (150,395)
   - K: 斜畫交點 (223.85,360)
+  - V: 斜畫交點 (150,146.25)
+  - W: 斜畫交點 (150,146.25)
+  - W: 斜畫交點 (390,146.25)
+  - W: 斜畫交點 (300,243.75)
   - Y: 斜畫交點 (195,476.25)
   - ampersand: 斜畫交點 (380,300)
   - ampersand: 斜畫交點 (393.24,243.24)

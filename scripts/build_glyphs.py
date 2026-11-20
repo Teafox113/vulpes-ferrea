@@ -208,10 +208,20 @@ def build():
     k_loop = R(0, 300, W, XH, tr=C_MIN, br=C_LC).difference(R(90, 360, 180, XH - BAR, br=M))
     glyph("k", 0x6B, U(stem(0, 0, ASC, "fork", "blade"), k_loop, diag(180, 0, 90, 300)), W, rsb=SB_PT,
           note="r3：織體式閉口 k，上方小碗 + 斜腳，取代 r2 的交叉臂")
-    glyph("v", 0x76, U(diag(90, 0, 0, XH), diag(90, 0, 180, XH)), W, lsb=SB_PT, rsb=SB_PT)
-    glyph("w", 0x77, U(diag(90, 0, 0, XH), diag(90, 0, 180, XH), diag(270, 0, 180, XH), diag(270, 0, 360, XH)),
-          450, lsb=SB_PT, rsb=SB_PT)
-    glyph("x", 0x78, U(diag(0, 0, 180, XH), diag(180, 0, 0, XH)), W, lsb=SB_PT, rsb=SB_PT)
+    # v w x（0.310 改版，回應 Codex 提案 004 選項 A「折筆骨架」）：
+    # 織體的 v／w 是「直畫落地，再由右下斜畫回升到短直畫」，左下副切、右下由斜畫取代主切角，與 n u m 同一套柵欄。
+    v = cut(U(stem(0, 0, XH, "blade"), diag(0, 0, 180, 300), stem(180, 300, XH, "blade")), tri("bl", 0, 0, C_MIN))
+    glyph("v", 0x76, v, W, note="0.310：左直畫落地 + 回升斜畫 + 右短直畫（織體 v）")
+
+    w = U(stem(0, 0, XH, "blade"), diag(0, 0, 180, 300), stem(180, 0, XH, "blade"), diag(180, 0, 360, 300),
+          stem(360, 300, XH, "blade"))
+    glyph("w", 0x77, cut(w, tri("bl", 0, 0, C_MIN), tri("bl", 180, 0, C_MIN)), 450,
+          note="0.310：三根直畫，前兩根落地，各以回升斜畫接到下一根（與 m 同寬、上下相反）")
+    # x（0.310 第二版）：兩筆都用 v 的折筆語彙「直畫 → 45° 斜畫 → 直畫」，在中央交叉；
+    #    四個角都是直畫腳（上端刃切、下端刃切），像四根 minim 夾住一個 45° 交叉。
+    x = U(stem(0, 360, XH, "blade"), diag(180, 180, 0, 360), stem(180, 0, 180, "flat", "blade"),
+          stem(0, 0, 180, "flat", "blade"), diag(0, 180, 180, 360), stem(180, 360, XH, "blade"))
+    glyph("x", 0x78, x, W, lsb=SB, rsb=SB, note="0.310：四根直畫腳 + 中央 45° 交叉（兩筆都是直畫→斜畫→直畫）")
     z = U(R(0, XH - BAR, W, XH, tl=BLADE), R(0, 0, W, BAR, br=BLADE), diag(0, BAR, 180, XH - BAR))
     glyph("z", 0x7A, z, W, lsb=SB_PT, rsb=SB_PT)
 
@@ -274,10 +284,16 @@ def build():
           note="中央 V 停在 240，不落地")
     N = U(stem(0, 0, CAP, "flat", "blade"), stem(X1, 0, CAP, "blade", "flat"), diag(X1, 0, 0, CAP))
     glyph("N", 0x4E, N, WC, SB_UC, SB_UC)
-    glyph("V", 0x56, U(diag(120, 0, 0, CAP), diag(120, 0, 240, CAP)), WC, SB_PT, SB_PT)
-    glyph("W", 0x57, U(diag(120, 0, 0, CAP), diag(120, 0, 240, CAP), diag(360, 0, 240, CAP), diag(360, 0, 480, CAP)),
-          570, SB_PT, SB_PT)
-    glyph("X", 0x58, U(diag(0, 0, 240, CAP), diag(240, 0, 0, CAP)), WC, SB_PT, SB_PT)
+    # V W X（0.310）：與小寫相同的折筆骨架
+    V = cut(U(stem(0, 0, CAP, "blade"), diag(0, 0, 240, 390), stem(240, 390, CAP, "blade")), tri("bl", 0, 0, C_MIN))
+    glyph("V", 0x56, V, WC, SB_UC, SB_UC - 15, note="0.310：左直畫落地 + 回升斜畫 + 右短直畫")
+    Wd = U(stem(0, 0, CAP, "blade"), diag(0, 0, 240, 390), stem(240, 0, CAP, "blade"), diag(240, 0, 480, 390),
+           stem(480, 390, CAP, "blade"))
+    glyph("W", 0x57, cut(Wd, tri("bl", 0, 0, C_MIN), tri("bl", 240, 0, C_MIN)), 570, SB_UC, SB_UC - 15,
+          note="0.310：三根直畫、兩道回升斜畫")
+    Xg = U(stem(0, 480, CAP, "blade"), diag(240, 240, 0, 480), stem(240, 0, 240, "flat", "blade"),
+           stem(0, 0, 240, "flat", "blade"), diag(0, 240, 240, 480), stem(240, 480, CAP, "blade"))
+    glyph("X", 0x58, Xg, WC, SB_UC, SB_UC, note="0.310：四根直畫腳 + 中央 45° 交叉")
     glyph("Y", 0x59, U(diag(120, 330, 0, CAP), diag(120, 330, 240, CAP), stem(120, 0, 360, "flat", "blade")), WC,
           SB_PT, SB_PT)
     Z = U(R(0, CAP - BAR, WC, CAP, tl=BLADE), R(0, 0, WC, BAR, br=BLADE), diag(0, BAR, 240, CAP - BAR))
@@ -753,17 +769,17 @@ FIGS_TNUM = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eig
 # ═════════════ OpenType 功能（§8）═════════════
 # 字偶：以字形外側輪廓分類。左類看字形「右側」，右類看字形「左側」。重音字自動跟隨基本字母。
 KERN_LEFT = {
-    "L_T": ["T"], "L_V": ["V", "W"], "L_Y": ["Y"], "L_L": ["L"], "L_FP": ["F", "P"], "L_KX": ["K", "X"],
-    "L_A": ["A"], "L_r": ["r"], "L_vwy": ["v", "w", "y"], "L_kx": ["k", "x"], "L_f": ["f"],
+    "L_T": ["T"], "L_V": ["V", "W"], "L_Y": ["Y"], "L_L": ["L"], "L_FP": ["F", "P"], "L_KX": ["K"],
+    "L_A": ["A"], "L_r": ["r"], "L_vwy": ["v", "w", "y"], "L_kx": ["k"], "L_f": ["f"],
     "L_quote": ["quotesingle", "quotedbl", "quoteright", "quotedblright", "quoteleft", "quotedblleft"],
     "L_comma": ["period", "comma", "ellipsis", "quotesinglbase", "quotedblbase"],
     "L_hyph": ["hyphen", "endash", "emdash"],
 }
 KERN_RIGHT = {
-    "R_O": ["C", "G", "O", "Q", "Oslash", "OE"], "R_A": ["A", "AE"], "R_J": ["J"], "R_T": ["T"], "R_V": ["V", "W"],
+    "R_O": ["C", "G", "O", "Q", "Oslash", "OE"], "R_A": ["A", "AE"], "R_J": ["J"], "R_T": ["T"], "R_V": [],
     "R_Y": ["Y"],
     "R_lr": ["a", "c", "d", "e", "g", "o", "q", "s", "ae", "oe", "oslash", "eth"],
-    "R_lx": ["m", "n", "p", "r", "u", "dotlessi", "mu"], "R_lv": ["v", "w", "y"], "R_lz": ["x", "z"],
+    "R_lx": ["m", "n", "p", "r", "u", "x", "dotlessi", "mu"], "R_lv": ["v", "w", "y"], "R_lz": ["z"],
     "R_quote": ["quotesingle", "quotedbl", "quoteright", "quotedblright", "quoteleft", "quotedblleft"],
     "R_comma": ["period", "comma", "ellipsis", "quotesinglbase", "quotedblbase"],
     "R_hyph": ["hyphen", "endash", "emdash"],
@@ -771,8 +787,8 @@ KERN_RIGHT = {
 KERN_PAIRS = [
     ("L_T", "R_lr", -75), ("L_T", "R_lx", -60), ("L_T", "R_lv", -45), ("L_T", "R_lz", -45), ("L_T", "R_comma", -75),
     ("L_T", "R_hyph", -60), ("L_T", "R_A", -30), ("L_T", "R_O", -15), ("L_T", "R_J", -60),
-    ("L_V", "R_lr", -45), ("L_V", "R_lx", -30), ("L_V", "R_comma", -60), ("L_V", "R_hyph", -30), ("L_V", "R_A", -30),
-    ("L_V", "R_O", -15), ("L_V", "R_J", -45),
+    ("L_V", "R_lr", -30), ("L_V", "R_lx", -15), ("L_V", "R_comma", -45), ("L_V", "R_A", -15),
+    ("L_V", "R_O", -15), ("L_V", "R_J", -15),
     ("L_Y", "R_lr", -60), ("L_Y", "R_lx", -45), ("L_Y", "R_comma", -75), ("L_Y", "R_hyph", -45), ("L_Y", "R_A", -30),
     ("L_Y", "R_O", -15), ("L_Y", "R_J", -60),
     ("L_L", "R_T", -75), ("L_L", "R_V", -60), ("L_L", "R_Y", -75), ("L_L", "R_quote", -90), ("L_L", "R_hyph", -45),

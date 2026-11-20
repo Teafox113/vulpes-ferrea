@@ -25,7 +25,7 @@ UPM = 1000
 # 固定時間戳，讓同一份原始檔每次建出位元組相同的字型檔，git 才不會因為重建而出現假變更。
 os.environ.setdefault("SOURCE_DATE_EPOCH", "1794528000")  # 2026-11-13 00:00 UTC
 PS = "VulpesFerrea-Regular"
-VERSION = 0.300
+VERSION = 0.310
 
 
 def check(data, diag, exempt):
